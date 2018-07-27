@@ -58,7 +58,7 @@ public class Main {
     }
 
     private List<Student> getStudents(Connection connection) throws SQLException {
-        Statement statement = connection.createStatement();
+        Statement statement = connection.createStatement()
         ResultSet resultSet = statement.executeQuery("SELECT * FROM Student");
         List<Student> students = new ArrayList<>();
         while (resultSet.next()) {
